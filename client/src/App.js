@@ -13,13 +13,13 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div render={props => (<Movie {...props} addToSavedList={addToSavedList} />)}>
       <SavedList list={savedList} />
       <div> {/*Replace this Div with your Routes */}
         <Route exact path="/">
           <MovieList />
         </Route>
-        <Route path="/movies/:movieID">
+        <Route path="/movies/:id">
           <Movie/>
         </Route>
       </div>

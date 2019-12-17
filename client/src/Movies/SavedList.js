@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
 const SavedList = props => (
   <div className="saved-list">
     <h3>Saved Movies:</h3>
@@ -8,10 +9,9 @@ const SavedList = props => (
     ))}
     
     <div className="home-button">
-      <Link to="/">Home</Link>
-      </div>
-
-    
+      {/* <Link to="/">Home</Link> */}
+      <NavLink to="/">Home</NavLink>
+      </div>    
   </div>
 );
 
