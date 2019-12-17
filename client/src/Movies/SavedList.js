@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { /*Link,*/ NavLink } from 'react-router-dom';
 
 const SavedList = props => (
   <div className="saved-list">
@@ -7,11 +7,12 @@ const SavedList = props => (
     {props.list.map(movie => (
       <span className="saved-movie">{movie.title}</span>
     ))}
-    
-    <div className="home-button">
-      {/* <Link to="/">Home</Link> */}
-      <NavLink to="/">Home</NavLink>
-      </div>    
+    <NavLink to="/">
+      <div className="home-button">
+        {/* <Link to="/">Home</Link> */}
+        Home
+      </div>   
+    </NavLink> 
   </div>
 );
 
